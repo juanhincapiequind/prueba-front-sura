@@ -38,7 +38,7 @@ export class ConfigurationTableComponent {
 
   ngOnInit(): any {
     this.initializeDataSource();
-    setTimeout(() => { this.isTableVisible = true}, 2000)
+    setTimeout(() => { this.isTableVisible = true}, 1500)
     
   }
 

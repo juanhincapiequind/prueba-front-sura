@@ -19,8 +19,11 @@ mat-table {
 
 .action-distribution {
   margin-left: 86%;
-  margin-top: 0.7vh; 
-  
+  margin-top: 0.7vh;
+  @media (max-width: 767px) {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 .btn-style {
@@ -43,4 +46,15 @@ mat-card {
   max-width: 1200px;
   box-shadow: none;
 }
+@media (max-width: 767px) {
+  mat-header-cell,
+  mat-cell {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
 
+  mat-table {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
