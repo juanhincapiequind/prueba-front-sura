@@ -1,0 +1,44 @@
+<ng-container *ngIf="selectedApplication && isTableVisible" class="table-container">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title class="table-title-disposition"
+        ><strong>Dominio: </strong>
+        <i>{{ selectedDomain ? selectedDomain.name : "General" }}</i>
+        <mat-icon fontIcon="arrow"></mat-icon><strong>Aplicación: </strong
+        ><i>{{ selectedApplication || "" }}</i></mat-card-title
+      >
+    </mat-card-header>
+    <mat-card-content class="table-content-disposition">
+      <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="state">
+          <mat-header-cell *matHeaderCellDef> Estado </mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-slide-toggle [checked]="element.state"></mat-slide-toggle>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="configName">
+          <mat-header-cell *matHeaderCellDef>
+            Nombre configuración
+          </mat-header-cell>
+          <mat-cell *matCellDef="let element">{{
+            element.configName
+          }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="observations">
+          <mat-header-cell *matHeaderCellDef> Observaciones </mat-header-cell>
+          <mat-cell *matCellDef="let element"
+            ><button mat-button matTooltip="{{ element.observations }}">
+              <mat-icon fontIcon="search"></mat-icon></button
+          ></mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </mat-card-content>
+  </mat-card>
+  <div class="action-distribution">
+    <button mat-flat-button (click)="openDialog()" class="btn-style">
+      Guardar cambios
+    </button>
+  </div>
+</ng-container>

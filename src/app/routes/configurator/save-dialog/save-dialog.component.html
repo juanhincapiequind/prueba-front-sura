@@ -1,0 +1,12 @@
+<h2 mat-dialog-title><mat-icon fontIcon="warning" style="color: #0030a4 !important;"></mat-icon>Confirmación</h2>
+<mat-dialog-content>
+  <p>¿Esta seguro que desea guardar los cambios realizados?</p>
+  <mat-form-field>
+    <mat-label>Observaciones</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-flat-button (click)="confirmAction()">Confirmar</button>
+  <button mat-button (click)="closeDialog()">Cancelar</button>
+</mat-dialog-actions>

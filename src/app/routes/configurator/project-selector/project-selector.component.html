@@ -1,0 +1,34 @@
+<div class="select-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Dominio</mat-label>
+      <mat-select [formControl]="domainControl">       
+        <mat-option *ngFor="let domain of domains" [value]="domain">
+          {{ domain.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Aplicación</mat-label>
+      <input
+        type="text"
+        matInput
+        [formControl]="applicationControl"
+        [matAutocomplete]="auto"
+      />
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onApplicationSelected($event.option.value)">
+        <mat-option
+          *ngFor="let app of filteredApplications | async"
+          [value]="app"
+        >
+          {{ app.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  
+  <app-configuration-table
+    [selectedDomain]="domainControl.value"
+    [selectedApplication]="applicationControl.value"
+  ></app-configuration-table>
+  

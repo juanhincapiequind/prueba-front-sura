@@ -1,0 +1,46 @@
+@use "../../../../styles.scss" as gs;
+
+//TODO: Efecto a la tabla cuando se esta generando, 1s delay aprox
+
+.table-container {
+  margin-top: 8vh;
+  max-width: 100%;
+}
+
+mat-header-cell {
+  background-color: #0033a0 !important;
+  color: #ffff;
+  font-size: 1.5rem;
+}
+
+mat-table {
+  box-shadow: none;
+}
+
+.action-distribution {
+  margin-left: 86%;
+  margin-top: 0.7vh; 
+  
+}
+
+.btn-style {
+  background-color: #0033a0;
+  color: #fff;
+}
+
+mat-slide-toggle {
+  transform: scale(0.8);
+}
+
+.table-title-disposition {
+  margin-bottom: 2vh;
+  margin-top: 1.5vh;
+}
+
+mat-card {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: none;
+}
+

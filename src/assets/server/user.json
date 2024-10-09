@@ -1,0 +1,51 @@
+ {
+   "userName": "user",
+   "fullName": "Fake User",
+   "lastAccess": "Wed Jul 04 11:40, 2018",
+   "urlLogout": "",
+   "fullUrlLogout": "",
+   "menu": {
+     "name": "configurador_pipelines",
+     "menuItems": [{
+         "cdresource": 1,
+         "contextPath": "sample/home",
+         "name": "Inicio",
+         "image": "pi-home",
+         "order": 1,
+         "target": null,
+         "windowOptions": null,
+         "children": null
+       },
+       {
+         "cdresource": 2,
+         "contextPath": "sample/dashboard",
+         "name": "Tecnologías",
+         "image": "pi-microsoft",
+         "order": 2,
+         "target": null,
+         "windowOptions": null,
+         "children": null
+       },
+       {
+         "cdresource": 3,
+         "contextPath": "sample/structure",
+         "name": "Estructura",
+         "image": "pi-sitemap",
+         "order": 3,
+         "target": null,
+         "windowOptions": null,
+         "children": null
+       },
+       {
+         "cdresource": 4,
+         "contextPath": "sample/guidelines",
+         "name": "Lineamientos",
+         "image": "pi-list",
+         "order": 4,
+         "target": null,
+         "windowOptions": null,
+         "children": null
+       }
+     ]
+   }
+ }
